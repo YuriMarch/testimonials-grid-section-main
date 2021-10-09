@@ -1,0 +1,140 @@
+body {
+	font: 100%/1.5 "Roboto", sans-serif;
+	background-color: hsl(210, 46%, 95%);
+	color: hsl(0, 0%, 81%);
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+	margin: 2em 1em 2em 1em;
+	display: grid;
+	gap: 1.5em;
+}
+
+.card {
+	border-radius: 0.5em;
+	padding: 1.5em;
+}
+
+.card-header {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 3fr;
+	margin-bottom: 1em;
+	column-gap: 1em;
+}
+
+img {
+	border-radius: 50%;
+	grid-row: 1/3;
+	align-self: center;
+	justify-self: start;
+	box-shadow: 0 0 2px 1px;
+}
+
+.person-name {
+	font-size: 1em;
+	margin: 0;
+	align-self: end;
+}
+
+.verification-status {
+	font-size: 0.9em;
+	margin: 0;
+	align-self: start;
+	font-weight: 500;
+	opacity: 0.4;
+}
+
+.main-text {
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+.text {
+	font-size: 0.9em;
+	font-weight: 500;
+	opacity: 0.4;
+}
+
+.card-1 {
+	background: url(./images/bg-pattern-quotation.svg), hsl(263, 55%, 52%);
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-position-x: 90%;
+}
+
+.card-2 {
+	background-color: hsl(217, 19%, 35%);
+}
+
+.card-4 {
+	background-color: hsl(219, 29%, 14%);
+}
+
+.card-5,
+.card-3 {
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(219, 29%, 14%);
+}
+
+.card-4 > .text,
+.card-2 > .text {
+	color: hsl(0, 0%, 100%);
+	opacity: 0.6;
+}
+
+.card-5 > .text,
+.card-3 > .text {
+	color: hsl(217, 19%, 35%);
+	opacity: 0.6;
+}
+
+@media screen and (min-width: 425px) {
+	.card-header {
+		grid-template-columns: 1fr 20fr;
+	}
+
+	img {
+		justify-self: end;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		margin: 100px auto;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 1200px;
+	}
+
+	.card-1 {
+		grid-row: 1;
+		grid-column: 1/3;
+	}
+
+	.card-2 {
+		grid-row: 1;
+		grid-column: 3/4;
+	}
+
+	.card-3 {
+		grid-row: 2;
+		grid-column: 1/2;
+	}
+
+	.card-4 {
+		grid-row: 2;
+		grid-column: 2/4;
+	}
+
+	.card-5 {
+		grid-row: 1/3;
+		grid-column: 4/5;
+	}
+
+	.card {
+		padding: 1em;
+	}
+}
